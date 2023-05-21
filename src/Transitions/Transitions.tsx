@@ -1,10 +1,10 @@
-import React, { useDebugValue, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
+import { useSpring } from "react-native-redash";
 
 import { Button, StyleGuide, cards } from "../components";
 
 import { AnimatedCard } from "./AnimatedCard";
-import { useDerivedValue, useSharedValue, withSpring, withTiming } from "react-native-reanimated";
 
 const styles = StyleSheet.create({
   container: {
@@ -14,21 +14,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const useSpring = (state) => {
-  const value = useSharedValue(0);
-  useEffect(() => {
-    value.value = typeof state === 'number' ? state : (state ? 1 : 0);
-  }, [state, value]);
-  return useDerivedValue(() => {
-    return withSpring(value.value);
-  });
-};
-
 export const Transitions = () => {
   const [toggled, setToggle] = useState(false);
-
   const transition = useSpring(toggled);
-
   return (
     <View style={styles.container}>
       {cards.slice(0, 3).map((card, index) => (
