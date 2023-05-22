@@ -7,6 +7,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {Examples} from './src/Examples';
 import { PanGesture } from './src/PanGesture';
 import { Transitions } from './src/Transitions';
+import { Animations } from './src/Animations/Animations';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,13 @@ export default function App() {
           component={PanGesture}
           options={{
             title: "PanGesture",
+          }}
+        />
+        <Stack.Screen
+          name="Animations"
+          component={Animations}
+          options={{
+            title: "Animations",
           }}
         />
         <Stack.Screen name="Transitions" component={Transitions} options={{title: "Transitions"}} />
