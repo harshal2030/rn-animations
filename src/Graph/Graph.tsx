@@ -11,12 +11,12 @@ import { Label } from "./Label";
 const { width } = Dimensions.get("window");
 const height = width;
 const data: [number, number][] = [
-  { x: new Date(2023, 8, 12), y: 4371 },
-  { x: new Date(2023, 8, 13), y: 6198 },
-  { x: new Date(2023, 8, 14), y: 5310 },
-  { x: new Date(2023, 8, 15), y: 7188 },
-  { x: new Date(2023, 8, 16), y: 8677 },
-  { x: new Date(2023, 8, 17), y: 5012 },
+  { x: new Date(2023, 7, 12), y: 4371 },
+  { x: new Date(2023, 7, 13), y: 6198 },
+  { x: new Date(2023, 7, 14), y: 5310 },
+  { x: new Date(2023, 7, 15), y: 7188 },
+  { x: new Date(2023, 7, 16), y: 8677 },
+  { x: new Date(2023, 7, 17), y: 5012 },
 ].map((p) => [p.x.getTime(), p.y]);
 
 const domain = {
