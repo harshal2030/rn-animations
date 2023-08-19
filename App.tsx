@@ -9,6 +9,7 @@ import { PanGesture } from './src/PanGesture';
 import { Transitions } from './src/Transitions';
 import { Animations } from './src/Animations/Animations';
 import { CircularSlider } from './src/CircularSlider/CircularSlider';
+import { Graph } from './src/Graph/Graph';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,7 @@ export default function App() {
         />
         <Stack.Screen name="Transitions" component={Transitions} options={{title: "Transitions"}} />
         <Stack.Screen name="CircularSlider" component={CircularSlider} options={{title: "CircularSlider"}} />
+        <Stack.Screen name="Graph" component={Graph} options={{title: "Graph"}} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
