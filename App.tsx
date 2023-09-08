@@ -12,6 +12,7 @@ import { CircularSlider } from './src/CircularSlider/CircularSlider';
 import { Graph } from './src/Graph/Graph';
 import { Swiping } from './src/Swiping/Swiping';
 import {DynamicSpring} from './src/DynamicSpring/DynamicSpring';
+import { DragToSort } from './src/DragToSort';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +48,7 @@ export default function App() {
         <Stack.Screen name="Graph" component={Graph} options={{title: "Graph"}} />
         <Stack.Screen name="Swiping" component={Swiping} options={{title: "Swiping"}} />
         <Stack.Screen name="DynamicSpring" component={DynamicSpring} options={{title: "Dynamic Spring"}} />
+        <Stack.Screen name="DragToSort" component={DragToSort} options={{title: "Drag To Sort"}} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
