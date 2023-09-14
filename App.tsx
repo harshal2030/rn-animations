@@ -13,6 +13,7 @@ import { Graph } from './src/Graph/Graph';
 import { Swiping } from './src/Swiping/Swiping';
 import {DynamicSpring} from './src/DynamicSpring/DynamicSpring';
 import { DragToSort } from './src/DragToSort';
+import { Bezier } from './src/Bezier';
 
 const Stack = createNativeStackNavigator();
 
@@ -49,6 +50,7 @@ export default function App() {
         <Stack.Screen name="Swiping" component={Swiping} options={{title: "Swiping"}} />
         <Stack.Screen name="DynamicSpring" component={DynamicSpring} options={{title: "Dynamic Spring"}} />
         <Stack.Screen name="DragToSort" component={DragToSort} options={{title: "Drag To Sort"}} />
+        <Stack.Screen name="Bezier" component={Bezier} options={{title: "Bezier Curves"}} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
