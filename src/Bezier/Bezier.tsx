@@ -39,6 +39,7 @@ export const Bezier = () => {
   const c1y = useSharedValue(min);
   const c2x = useSharedValue(max);
   const c2y = useSharedValue(max);
+  const d = `M ${start.x} ${start.y} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${end.x} ${end.y}`;
 
   const path = useAnimatedProps(() => ({ d: `M ${start.x} ${start.y} C ${c1x.value} ${c1y.value}, ${c2x.value} ${c2y.value}, ${end.x} ${end.y}` }) );
   const line1 = useAnimatedProps(() => ({
@@ -66,7 +67,7 @@ export const Bezier = () => {
             fill="transparent"
             stroke="black"
             strokeWidth={STROKE_WIDTH}
-            d={path.d}
+            d={d}
             animatedProps={path}
           />
           <AnimatedLine
